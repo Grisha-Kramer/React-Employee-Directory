@@ -4,10 +4,11 @@ import "./style.css"
 
 const Work = () => {
   return (
+    <button onClick={handleSort()} >Sort by first name</button>
     <div className="container" styles="font-family: Montserrat">
       <div className="container" id="proj">
         <div className="col-xl text-center">
-          <h1 className="title">s & Homework</h1>
+          <h1 className="title">Employee Directory</h1>
           {user.employees.map((employee) => (
             <div>
               <p>{employee.firstName}</p> 
