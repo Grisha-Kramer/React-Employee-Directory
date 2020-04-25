@@ -1,35 +1,24 @@
 import React from "react";
-import "./style.css";
+import user from "../Employees/Employees"
+import ".style.css"
 
-function SearchResults(props) {
+const Work = () => {
   return (
-    <div>
-    <table className="table table-dark">
-      <thread>
-        <Tr>
-          <th>First Name</th>
-          <th><button className="button button-blue" onClick={props.sortLast}></button>Last Name</th>
-          <th><button className="button button-blue" onClick={props.sortDep}>Department</button></th>
-        </Tr>
-      </thread>
-      <tbody>
-        {props.employees.map(employee => {
-          return(
-            <tr key={employee.id}>
-              <td>{employee.firstName}</td>
-              <td>{employee.lastName}</td>
-              <td>{employee.dep}</td>
-            </tr>
-          )
-        }
-
-        )}
-      </tbody>
-
-
-    </table>
+    <div className="container" styles="font-family: Montserrat">
+      <div className="s_container" id="proj">
+        <div className="col-xl text-center">
+          <h1 className="title">s & Homework</h1>
+          {user.employees.map((employee) => (
+            <div>
+              <p>{employee.firstName}</p> 
+              <p>{employee.lastName}></p>
+              <p>{employee.dep} </p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
+  );
+};
 
-  )
-  }
-export default SearchResults;
+export default Work;
