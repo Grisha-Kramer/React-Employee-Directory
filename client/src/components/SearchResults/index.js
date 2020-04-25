@@ -1,11 +1,11 @@
 import React from "react";
 import user from "../Employees/Employees"
-import ".style.css"
+import "./style.css"
 
 const Work = () => {
   return (
     <div className="container" styles="font-family: Montserrat">
-      <div className="s_container" id="proj">
+      <div className="container" id="proj">
         <div className="col-xl text-center">
           <h1 className="title">s & Homework</h1>
           {user.employees.map((employee) => (
